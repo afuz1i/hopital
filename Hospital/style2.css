@@ -1,0 +1,233 @@
+@import url(https://fonts.google.com/specimen/Montserrat?query=monts);
+@import url(https://fonts.google.com/specimen/Abril+Fatface?query=abril&sidebar.open&selection.family=Abril+Fatface);
+
+*{
+    font-family: 'Montserrat';
+}
+html
+{
+    scroll-behavior: smooth; /* pour garder une fluidité lors du coulissage */
+}
+
+body{
+    margin:0 auto;/* retire la marge en automatique  externe */
+}
+/*tete de la page*/
+header.header img {
+    width: 150px;  /* modifier la taille de image reduire sa taille */
+}
+header.header{
+    display:flex;
+    align-items:center; 
+
+}
+section.top-page{
+    background: url('../images/bg.jpg');/*ajouter une image en fond avec attribut url */
+    background-size: cover; /*pour eviter la repetition des images dans son interface */
+    height: 80vh;/*ajuster la taille de l'image en arriere plan soit agrandir ou diminuer */
+    padding: 25px;
+}
+.langing-page{
+    padding: 20px 50px;/*marge interne */
+}
+.scroll-down{
+    color:white;
+    text-decoration:none; 
+    position:absolute; 
+    /* absolu faite est assosié a top et bottom cas de deplacement des differentes propositions soit un scroll */
+    bottom:180px;
+}
+.big-title{
+    color:white;
+    font-size: 80px; /*taille de la police */ 
+    font-family:'Abril FatFace'; /* import de la police abril */
+    /* font-weight:100; pour degraisser le texte sur cette interface  */
+    padding:20px 50px;
+}
+    
+    
+/* menu de navigation*/
+
+nav.nav{
+    display:flex; /* aligner du texte */
+    justify-content: space-between;/* pour separer les element du texte c'a d garder un espace ceci fonctionne avec  width*/ 
+    list-style: none; /*annuler les fonctionnalite du des puces */
+    width: 400px;/* modifier la taille de image reduire sa taille */
+    margin-left:30px;
+}
+nav.nav li a{
+    color:white;
+    text-decoration: none;
+
+}
+/* services  */
+
+.service{
+    margin:100px;
+    display:flex;
+   justify-content :space-evenly; /*rentre le texte beaucoup plus fluide sur les mvt coulissage */
+
+}
+.delivery-icon{
+    font-size:50px;
+    color:#ADD981;
+}
+.service-item{
+
+    display: flex;
+    flex-direction: column; /*donner une direction flexible colonne*/
+    align-items: center; /* centrer les logos par rapport au texte */
+}
+.service-details{
+    font-weight:600;/* pour mettre le texte en gras legerement */
+    width: 150px; /* mettre le texte sur colonne c a d faire correspondre des etages sur le texte */
+    text-align: center;
+}
+/* meilleurs produits  */
+.bests-items{
+    margin:70px;
+}
+
+.section-title{
+    font-size: 50px;
+    font-family: 'Abril FatFace', ;
+    font-weight: 100;
+    position:relative;/* pouvant etre definit et assossie avec une ps absolu on peut donner si elle doit etre en haaut ... selons autruis */
+
+}
+.section-title::before{
+    content:"";
+    position:absolute;/* par rapport a la relative */
+    background-color: #ADD981;
+    width: 50px;/*largeur */
+    height:7px;/*hauteur*/
+    bottom:0;
+  
+}
+.best-plants{
+    
+    min-height: 500px;
+    display:flex;
+    flex-wrap:wrap; /* pour definir un meilleur agencements des images dans l'espace*/
+}
+.plant-box{
+    position:relative;
+    background-size:cover;
+    background-position: center;
+     /*pour remplir l'espace present par un ie la taille necessaire  */
+}
+.no-grid
+{
+    min-width: 350px;
+    height: 500px;
+    flex:1;
+}
+
+.plant1{
+    background-image:  url(../images/nos_meilleures_ventes/1.jpg);
+} 
+.plant2{
+    background-image:  url(../images/nos_meilleures_ventes/2.jpg);
+}
+.plant3{
+    background-image:  url(../images/nos_meilleures_ventes/3.jpg);
+}
+.plant4{
+    background-image:  url(../images/nos_meilleures_ventes/4.jpg);
+}
+
+.plant-details{
+    position:absolute;
+    width: 100%; /*definir la position a 100% de la largeur */
+   bottom:0;
+    background-color:#FFFFFFDF;
+    padding: 5px 2px;
+}
+.plant-nom{
+    font-size:22px;
+    font-weight: 600;
+    line-height: 2px;/*reduire la taille de la hauteur soit pour augmenter ou diminuer*/
+
+}
+.plant-prix{
+    color:#ADD981;
+    font-weight: 800;
+    font-size: 14px;
+    
+}
+.plant-details1
+{
+    position:absolute;
+    width: 100%; /*definir la position a 100% de la largeur */
+   bottom: 0px;
+    background-color:#FFFFFFDF;
+    padding: 5px 2px; 
+}
+.plant-details2
+{
+    position:absolute;
+    width: 100%; /*definir la position a 100% de la largeur */
+   bottom: 0px;
+    background-color:#FFFFFFDF;
+    padding: 5px 2px;
+}
+.plant-details3
+{
+    position:absolute;
+    width: 100%; /*definir la position a 100% de la largeur */
+    bottom: 0px;
+    background-color:#FFFFFFDF;
+    padding: 5px 2px;
+}
+/* nos plantes */
+.all-plants
+{
+    margin:100px; 
+}
+.plant-grid{
+    display: grid; /*pour faire des grille sur l'espace */
+    min-height: 150vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 400px);
+}
+
+.plant-grid1 {
+    background-image:url(../images/nos_plantes/1.jpg);
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+.plant-grid2 {
+    background-image:url(../images/nos_plantes/2.jpg); /* insertion d'image en arrire via url*/ 
+    grid-column: 3/5;
+}
+.plant-grid3 {
+    background-image:url(../images/nos_plantes/3.jpg);
+    grid-column: 3/5;
+}
+.plant-grid4 {
+    background-image:url(../images/nos_plantes/4.jpg);
+    grid-column: 1; /*pour faire des alignemrnt colonne */
+    grid-row: 3/5; /* definir un cadre pour les ligne */
+}
+.plant-grid5 {
+    background-image:url(../images/nos_plantes/5.jpg);
+    grid-column:2/4;
+    grid-row: 3/5;
+}
+.plant-grid6 {
+    background-image:url(../images/nos_plantes/6.jpg);
+    grid-column: 4;
+    grid-row: 3/5;
+}
+/* pied de page  */
+footer{
+    display:flex;
+    justify-content: space-between; /* espace les element du texte */
+    align-items: center; /*centrer les elements du texte */
+    margin: 20px  100px ; /*hauteur et sur les cotés */ 
+    font-weight: 600; /* pour graissir le texte */
+}
+footer a.cgv{
+     text-decoration: none ;
+     color: black;
+}
